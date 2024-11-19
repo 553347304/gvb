@@ -1,0 +1,75 @@
+logger:
+  level: info
+  prefix: ""
+  driver: log
+  show_line: true
+  log_in_console: true
+site_info:
+  created_at: "2024-9-26"
+  bei_an: 津ICP备2024017367号-1
+  title: 白音
+  qq_image: /file/uploads/QQ二维码.png
+  version: 8.0.1
+  email: 553347304@qq.com
+  wechat_image: /file/uploads/微信二维码.png
+  name: 白音
+  job: 后端开发
+  addr: 天津
+  slogan: 白音
+  slogan_en: koneko
+  web: http:/www.baiyin.com
+  bilibili_url: https://space.bilibili.com/59452692
+  gitee_url: https://gitee.com/baiyins
+  github_url: https://github.com/553347304
+qq:
+  app_id: BAIYIN
+  key: "6666666"
+  redirect: "666666"
+email:
+  host: smtp.qq.com
+  port: 465
+  user: 553347304@qq.com
+  password: dpnjspuleqbzbffc
+  default_from_email: 白音
+  use_ssl: true
+  user_tls: false
+upload:
+  size: 5
+  path: file/uploads/
+system:
+  port: "8000"
+  mysql: root:baiyin@tcp(159.75.103.16:33060)/gvb_db
+  es: http://159.75.103.16:9300
+  redis: 159.75.103.16:63790
+  log: release
+big_model:
+  setting:
+    name: qwen
+    enable: true
+    order: 0
+    api_key: sk-9a129b3586554d15aba647e8b5361e35
+    api_secret: xxxx-xx-xxxx
+    title: 白音千问
+    prompt: 白音千问AI大模型
+    slogan: 让更多人用上AI大模型
+    help: ""
+  session:
+    chat_scope: 3
+    session_score: 3
+    day_score: 100
+  model_list:
+  - label: 通义千问
+    value: qwen
+    disable: false
+  - label: 文心一言
+    value: wenxin
+    disable: true
+  - label: 星火大模型
+    value: xinghuo
+    disable: true
+  - label: 天工大模型
+    value: tiangong
+    disable: true
+  - label: ChatGPT
+    value: ChatGPT
+    disable: true

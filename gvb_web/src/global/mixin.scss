@@ -1,0 +1,87 @@
+@mixin margin-right($width) {
+  margin-right: $width;
+  &:last-child {
+	margin-right: 0;
+  }
+}
+
+@mixin image_show_select($height) {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+
+  img {
+	height: $height;
+	margin-right: 5px;
+	border-right: 5px;
+  }
+}
+
+@mixin image_avatar($size, $radius: 50%) {
+  .avatar {
+	width: $size;
+	height: $size;
+	border-radius: $radius;
+
+	img {
+	  width: 100%;
+	  height: 100%;
+	  border-radius: $radius;
+	  //border: 2px solid #fff;
+	}
+  }
+}
+
+@mixin md-editor() {
+
+  >.md-editor {
+	background-color: inherit;
+
+	.md-editor-preview-wrapper {
+	  padding: 0;
+
+	  .md-editor-preview {
+		img {
+		  padding: 0;
+		  border: none;
+		}
+
+		p {
+		  margin: 0;
+		}
+	  }
+	}
+  }
+}
+
+
+@keyframes box_move {
+  0% {
+	left: calc(-1 * var(--size));
+	top: calc(-1 * var(--size));
+  }
+  25% {
+	left: 100%;
+	top: calc(-1 * var(--size));
+  }
+  50% {
+	left: 100%;
+	top: 100%;
+  }
+  75% {
+	left: calc(-1 * var(--size));
+	top: 100%;
+  }
+  100% {
+	left: calc(-1 * var(--size));
+	top: calc(-1 * var(--size));
+  }
+}
+
+@mixin animation_box($size) {
+  --size: #{$size};
+  animation-name: box_move;
+  animation-duration: 5s; /* 动画持续时间 */
+  //animation-timing-function: linear; /* 动画时间函数 */
+  animation-iteration-count: infinite; /* 动画无限循环 */
+}
