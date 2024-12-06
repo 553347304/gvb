@@ -49,12 +49,11 @@ import Echarts_calendar from "@/components/echarts/echarts_calendar.vue";
 import Web_tags from "@/components/web/web_tags.vue";
 import web_article_list from "@/components/web/web_article_list.vue";
 
-import {onBeforeMount, onMounted, onServerPrefetch, reactive, ref, watch} from "vue";
+import {reactive, ref, watch} from "vue";
 import {ApiArticle, TypeArticle} from "@/api/article_api";
 import {useStore} from "@/stores";
 import {useRouter} from "vue-router";
 import {DefineWeb} from "@/api/web_api";
-import {ApiUser} from "@/api/user_api";
 
 const router = useRouter()
 const store = useStore();

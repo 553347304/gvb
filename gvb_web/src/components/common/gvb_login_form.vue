@@ -29,7 +29,7 @@
 			<div class="other-login">
 				<div class="label">第三方登录</div>
 				<div class="icons">
-					<a href=""><img src="/image/icon/qq.png" alt=""></a>
+					<a href=""><img :src="Files.icon.qq" alt=""></a>
 				</div>
 			</div>
 		</a-form>
@@ -43,6 +43,7 @@ import {reactive, ref} from "vue";
 import {ApiUser, TypeUser} from "@/api/user_api";
 import {Message} from "@arco-design/web-vue";
 import {useStore} from "@/stores";
+import {Files} from "@/global/files";
 
 const emits = defineEmits(["ok"]);
 const store = useStore()

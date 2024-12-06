@@ -112,7 +112,7 @@ onUnmounted(() => {
 
 				.slogan {
 					font-size: 21px;
-					font-family: hyxj, serif;
+					font-family: huakang_square_round_body_w7, serif;
 				}
 
 				.en_slogan {

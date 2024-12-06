@@ -1,3 +1,5 @@
+import {Files} from "@/global/files";
+
 export namespace DefineWeb {
     export const sortOption = [
         {label: "综合排序", value: ""},
@@ -20,12 +22,7 @@ export namespace DefineWeb {
     export const bannerIndex = {
         slogan: "Koneko",
         abstract: ['silver hair golden pupils'],
-        image: [
-            '/image/bg/bg.jpg',
-            '/image/bg/bg1.jpg',
-            '/image/bg/bg2.jpg',
-            '/image/bg/bg3.jpg',
-        ],
+        image: Files.bg,
     }
 }
 export namespace TypeWeb {

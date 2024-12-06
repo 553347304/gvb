@@ -91,7 +91,7 @@ UserIsScope()
 			color: var(--active);
 			font-size: 40px;
 			margin-top: 5px;
-			font-family: hyxj, serif;
+			font-family: huakang_square_round_body_w7, serif;
 		}
 
 		.slogan {

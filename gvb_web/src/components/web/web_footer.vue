@@ -12,18 +12,18 @@
 				</div>
 				<div class="filings">
 					<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-						<img src="/image/icon/filings.png" alt="">
+						<img :src="Files.icon.filings" alt="">
 						{{ store.siteInfo.bei_an }}
 					</a>
 				</div>
 			</div>
 
 			<div class="right">
-				<a :href="store.siteInfo.bilibili_url" target="_blank"><img src="/image/icon/bilibili.png" alt=""></a>
-				<a :href="store.siteInfo.gitee_url" target="_blank"><img src="/image/icon/gitee.png" alt=""></a>
-				<a :href="store.siteInfo.github_url" target="_blank"><img src="/image/icon/githup.png" alt=""></a>
-				<a :href="store.siteInfo.qq_image" target="_blank"><img src="/image/icon/qq.png" alt=""></a>
-				<a :href="store.siteInfo.wechat_image" target="_blank"><img src="/image/icon/wx.png" alt=""></a>
+				<a :href="store.siteInfo.bilibili_url" target="_blank"><img :src="Files.icon.bilibili" alt=""></a>
+				<a :href="store.siteInfo.gitee_url" target="_blank"><img :src="Files.icon.gitee" alt=""></a>
+				<a :href="store.siteInfo.github_url" target="_blank"><img :src="Files.icon.githup" alt=""></a>
+				<a :href="store.siteInfo.qq_image" target="_blank"><img :src="Files.icon.qq" alt=""></a>
+				<a :href="store.siteInfo.wechat_image" target="_blank"><img :src="Files.icon.wx" alt=""></a>
 			</div>
 		</div>
 
@@ -35,6 +35,7 @@
 import {useStore} from "@/stores";
 import {Time} from "@/BAIYIN/time";
 import {onUnmounted, ref} from "vue";
+import {Files} from "@/global/files";
 
 const store = useStore()
 const countDown = ref("")

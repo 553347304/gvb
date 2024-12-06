@@ -35,7 +35,7 @@
 				<div class="source">
 					<template v-if="data.list.length">
 						<div class="article_list">
-							<div class="item" v-for="item in data.list">
+							<div class="item" v-for="item in data.list" @click="s.Click(item.id)">
 								<div class="top"><img :src="item.banner_url" alt=""></div>
 								<div class="bottom">
 									<div class="title">
@@ -86,6 +86,7 @@ import {Base} from "@/BAIYIN/HTTP";
 import {Time} from "@/BAIYIN/time";
 import {Random} from "mockjs";
 import {Message} from "@arco-design/web-vue";
+import router from "@/router";
 
 const PageInfo = reactive(TypeApi.PageInfo())
 PageInfo.source = "like"
@@ -114,6 +115,10 @@ class _search {
 		data.list = result.data.list
 		data.total = result.data.total
 	}
+	Click = (id: string) => {
+		router.push({name: 'article', params: {id: id}})
+	}
+
 }
 
 const s = new _search()
