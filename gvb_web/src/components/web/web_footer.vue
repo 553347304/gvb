@@ -11,8 +11,8 @@
 					<span class="site_running_date">网站已运行: {{ countDown }}</span>
 				</div>
 				<div class="filings">
-					<a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-						<img :src="Files.icon.filings" alt="">
+					<img :src="Files.icon.filings" alt="">
+					<a href="https://beian.miit.gov.cn/" target="_blank">
 						{{ store.siteInfo.bei_an }}
 					</a>
 				</div>
@@ -106,15 +106,16 @@ onUnmounted(() => {
 			}
 
 			.filings {
+				display: flex;
+				align-items: center;
+
 				a {
-					display: flex;
-					align-items: center;
 					color: var(--color-text-2);
 					text-decoration: none;
+				}
 
-					img {
-						margin-right: 5px;
-					}
+				img {
+					margin-right: 5px;
 				}
 			}
 		}
